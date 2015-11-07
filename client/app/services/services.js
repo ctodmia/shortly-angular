@@ -9,6 +9,13 @@ angular.module('shortly.services', [])
         url: '/api/links'
       });
     },
+    addLink: function (data){
+      return $http({
+        method: 'POST',
+        url: '/api/links',
+        data: data
+      })
+    }
   };
 })
 .factory('Auth', function ($http, $location, $window) {
